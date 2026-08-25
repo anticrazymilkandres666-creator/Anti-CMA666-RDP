@@ -8,7 +8,7 @@ jobs:
     # Agar aapne GitHub par custom 32GB RAM wala runner khareeda hai, 
     # to 'windows-latest' ko uske naam se replace kar dein.
     runs-on: windows-latest 
-    timeout-minutes: ∞
+    timeout-minutes: 1000000000000000000000000000000000000000000
 
     steps:
       - name: Configure Core RDP Settings
