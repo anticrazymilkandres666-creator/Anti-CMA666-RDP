@@ -1,4 +1,4 @@
-name: RDP
+name: Anti-CMA2026
 
 on:
   workflow_dispatch:
@@ -8,7 +8,7 @@ jobs:
     # Agar aapne GitHub par custom 32GB RAM wala runner khareeda hai, 
     # to 'windows-latest' ko uske naam se replace kar dein.
     runs-on: windows-latest 
-    timeout-minutes: 3600
+    timeout-minutes: ∞
 
     steps:
       - name: Configure Core RDP Settings
@@ -34,7 +34,7 @@ jobs:
       - name: Create RDP User with Custom Password
         run: |
           # Set Custom Credentials
-          $password = "SpoilersHub0"
+          $password = "IHATECRAZYMILKANDRES"
           $securePass = ConvertTo-SecureString $password -AsPlainText -Force
           
           New-LocalUser -Name "RDP" -Password $securePass -AccountNeverExpires
@@ -93,8 +93,8 @@ jobs:
         run: |
           Write-Host "`n=== RDP ACCESS ==="
           Write-Host "Address: $env:TAILSCALE_IP"
-          Write-Host "Username: RDP"
-          Write-Host "Password: SpoilersHub0"
+          Write-Host "Username: Anti-CMA2026"
+          Write-Host "Password: IHATECRAZYMILKANDRES"
           Write-Host "==================`n"
           
           # Keep runner active indefinitely (or until manually cancelled)
